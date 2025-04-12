@@ -1,17 +1,15 @@
-import './App.css'
-import Stock from './components/Stock'
+import './App.css';
+import HomePage from './pages/HomePage/HomePage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="app">
-      <header className="app-header">
-        <h1>STOCK Linqed</h1>
-      </header>
-      <main>
-        <Stock />
-      </main>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

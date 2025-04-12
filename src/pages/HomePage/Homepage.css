@@ -1,0 +1,180 @@
+/* Base styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000; /* Dark background */
+  }
+  
+  /* Container for the entire page */
+  .homepage-container {
+    color: #fff; /* Default text color is white */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000; /* Keep top bar black */
+    border-bottom: 1px solid #d61dfb;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d61dfb; /* Pink/purple accent for the logo */
+  }
+  
+  .navbar-links a {
+    margin-left: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .navbar-links a:hover {
+    color: #d61dfb;
+  }
+  
+  /* MAIN CONTENT LAYOUT */
+  .main-content {
+    display: flex;
+    background-color: #000;
+    flex: 1; /* Fills the available space */
+    padding: 1rem 2rem;
+    gap: 2rem; /* spacing between columns */
+  }
+  
+  /* COLUMN LAYOUT */
+  .left-column,
+  .middle-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* CARD COMPONENT */
+  .card {
+    background-color: transparent; /* So we see the black background */
+    border: 1px solid #d61dfb;    /* Pink/purple accent border */
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  /* FEED SECTION */
+  .feed h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .feed-options button {
+    background-color: #000;
+    color: #d61dfb;
+    border: 1px solid #d61dfb;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  .feed-options button:hover {
+    background-color: #d61dfb;
+    color: #000;
+  }
+  
+  /* WATCHLIST SECTION */
+  .watchlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .watchlist li {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* LATEST SENTIMENT ALERTS */
+  .latest-sentiment-alerts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .latest-sentiment-alerts li {
+    margin-bottom: 0.5rem;
+  }
+  .latest-sentiment-alerts a {
+    color: #d61dfb;
+    text-decoration: none;
+  }
+  .latest-sentiment-alerts a:hover {
+    text-decoration: underline;
+  }
+  
+  /* MARKET MOOD */
+  .market-mood .mood-options {
+    display: flex;
+    gap: 1rem;
+  }
+  .market-mood .mood-options button {
+    background-color: #000;
+    color: #d61dfb;
+    border: 1px solid #d61dfb;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .market-mood .mood-options button:hover {
+    background-color: #d61dfb;
+    color: #000;
+  }
+  
+  /* STOCK SENTIMENT SEARCH */
+  .stock-sentiment-search p {
+    margin-bottom: 0.5rem;
+  }
+  .stock-sentiment-search input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d61dfb;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #000;
+    margin-bottom: 1rem;
+  }
+  .lookup-btn {
+    background-color: #000;
+    color: #d61dfb;
+    border: 1px solid #d61dfb;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .lookup-btn:hover {
+    background-color: #d61dfb;
+    color: #000;
+  }
+  
+  /* ASK LINQBOT FLOATING BUTTON */
+  .ask-linqbot {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  .ask-linqbot button {
+    background-color: #d61dfb;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .ask-linqbot button:hover {
+    opacity: 0.8;
+  }
+  
