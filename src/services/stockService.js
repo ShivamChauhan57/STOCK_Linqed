@@ -1,4 +1,5 @@
-const API_KEY = 'YOUR_API_KEY'; // You'll need to replace this with your actual API key
+// Alpha Vantage API for stock data
+const API_KEY = import.meta.env.VITE_ALPHA_VANTAGE_API_KEY;
 const BASE_URL = 'https://www.alphavantage.co/query';
 
 export const fetchStockData = async (symbol) => {

@@ -1,0 +1,159 @@
+.sentiment-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sentiment-container h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.sentiment-summary {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.overall-sentiment {
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.overall-sentiment h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sentiment-alert {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: rgba(255, 193, 7, 0.2);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.sentiment-chart {
+  margin: 20px 0;
+  height: 300px;
+}
+
+.sentiment-sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.sentiment-scraps {
+  margin-top: 30px;
+}
+
+.sentiment-scraps h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.scrap-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.scrap-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 15px;
+  align-items: start;
+}
+
+.scrap-source {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.scrap-content {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.scrap-score {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.scrap-time {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.source-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.source-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.source-header svg {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.source-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.source-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.sentiment-loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.sentiment-error {
+  text-align: center;
+  padding: 20px;
+  color: #f44336;
+  background-color: rgba(244, 67, 54, 0.1);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .sentiment-sources {
+    grid-template-columns: 1fr;
+  }
+}
