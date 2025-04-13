@@ -1,5 +1,6 @@
 import React from 'react';
 import './HomePage.css';
+import { AiOutlineComment } from 'react-icons/ai';
 
 function HomePage() {
   return (
@@ -9,7 +10,6 @@ function HomePage() {
         <div className="navbar-logo">STOCK Linqed</div>
         <div className="navbar-links">
           <a href="#chat">Chat</a>
-          <a href="#alerts">Alerts</a>
           <a href="#profile">Profile</a>
         </div>
       </nav>
@@ -20,7 +20,6 @@ function HomePage() {
         <div className="left-column">
           {/* FEED SECTION */}
           <div className="card feed">
-            <h2>Feed</h2>
             <h3>Is NVDA Overvalued or the Future?</h3>
             <div className="feed-options">
               <button>Overvalued</button>
@@ -59,8 +58,8 @@ function HomePage() {
           <div className="card market-mood">
             <h2>Market Mood</h2>
             <div className="mood-options">
-              <button>Bullish</button>
-              <button>Bearish</button>
+              <button >Bullish</button>
+              <button >Bearish</button>
             </div>
           </div>
         </div>
@@ -71,7 +70,7 @@ function HomePage() {
           <div className="card stock-sentiment-search">
             <h2>Stock Sentiment Search</h2>
             <p>Enter Stock Symbol Here</p>
-            <input type="text" placeholder="e.g., AAPL" />
+            <input type="text" placeholder=" AAPL" />
             <button className="lookup-btn">Look Up</button>
           </div>
         </div>
@@ -79,7 +78,10 @@ function HomePage() {
 
       {/* ASK LINQBOT FLOATING BUTTON/CHAT ICON */}
       <div className="ask-linqbot">
-        <button>Ask LinqBot</button>
+        <button>
+          <AiOutlineComment className="ask-linqbot-icon" />
+          <span className="ask-linqbot-text">Ask LinqBot</span>
+        </button>
       </div>
     </div>
   );

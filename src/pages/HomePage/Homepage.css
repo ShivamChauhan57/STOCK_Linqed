@@ -21,7 +21,7 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     background-color: #000; /* Keep top bar black */
-    border-bottom: 1px solid #d61dfb;
+    border-bottom: 1px solid #1100ff;
   }
   
   .navbar-logo {
@@ -62,7 +62,7 @@ body {
   /* CARD COMPONENT */
   .card {
     background-color: transparent; /* So we see the black background */
-    border: 1px solid #d61dfb;    /* Pink/purple accent border */
+    border: 1px solid #F35AA9;    /* Pink/purple accent border */
     border-radius: 8px;
     padding: 1rem;
   }
@@ -77,9 +77,10 @@ body {
     color: #d61dfb;
     border: 1px solid #d61dfb;
     border-radius: 4px;
-    padding: 0.5rem 1rem;
+    padding: 10px;
     margin-right: 0.5rem;
     cursor: pointer;
+    box-sizing: border-box;
   }
   .feed-options button:hover {
     background-color: #d61dfb;
@@ -118,20 +119,68 @@ body {
   /* MARKET MOOD */
   .market-mood .mood-options {
     display: flex;
-    gap: 1rem;
   }
-  .market-mood .mood-options button {
-    background-color: #000;
-    color: #d61dfb;
-    border: 1px solid #d61dfb;
+  
+  /* Common styles for both buttons */
+.mood-options button {
+    position: relative; /* Needed for the pseudo-element positioning */
+    overflow: hidden;   /* Keeps the expanding spotlight effect contained */
     border-radius: 4px;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
   }
-  .market-mood .mood-options button:hover {
-    background-color: #d61dfb;
-    color: #000;
+  
+  /* The pseudo-element for the spotlight effect */
+  .mood-options button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+    pointer-events: none; /* Ensures the pseudo-element doesn't interfere with clicks */
   }
+  
+  /* When hovering, enlarge the spotlight effect */
+  .mood-options button:hover::before {
+    width: 150%;
+    height: 150%;
+  }
+  
+  /* Bullish Button (1st button) default style */
+  .mood-options button:nth-child(1) {
+    border: 1px solid #d61dfb;     /* Same green border */
+    color: #fff;
+  }
+  
+  /* Bullish Button hover state */
+  .mood-options button:nth-child(1):hover {
+    background-color: #2ecc40;     /* Lighter green background */
+    border: 1px solid #228B22;     /* Border remains dark green */
+    color: #d61dfb;                   /* Change text color for contrast */
+  }
+  
+  /* Bearish Button (2nd button) default style */
+  .mood-options button:nth-child(2) {
+    border: 1px solid #d61dfb;     /* Same red border */
+    color: #fff;
+  }
+  
+  /* Bearish Button hover state */
+  .mood-options button:nth-child(2):hover {
+    background-color: #ff4136;     /* Lighter red background */
+    border: 1px solid #B22222;     /* Border remains dark red */
+    color: #1100ff;                   /* Change text color for contrast */
+  }
+  
+  
+
   
   /* STOCK SENTIMENT SEARCH */
   .stock-sentiment-search p {
@@ -140,18 +189,19 @@ body {
   .stock-sentiment-search input {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #d61dfb;
+    border: 1px solid #23CBFE;
     border-radius: 4px;
-    color: #fff;
+    color:  #1100ff;
     background-color: #000;
     margin-bottom: 1rem;
+    box-sizing: border-box;
   }
   .lookup-btn {
     background-color: #000;
-    color: #d61dfb;
-    border: 1px solid #d61dfb;
+    color: #23CBFE;
+    border: 1px solid #23CBFE;
     border-radius: 4px;
-    padding: 0.5rem 1rem;
+    padding: 15px;
     cursor: pointer;
   }
   .lookup-btn:hover {
