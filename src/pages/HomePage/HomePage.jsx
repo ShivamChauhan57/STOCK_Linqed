@@ -1,16 +1,29 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 import { AiOutlineComment } from 'react-icons/ai';
 
 function HomePage() {
+  const navigate = useNavigate();
+
+  // Click handler to navigate to the specified path
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <div className="homepage-container">
       {/* NAVIGATION BAR */}
       <nav className="navbar">
         <div className="navbar-logo">STOCK Linqed</div>
         <div className="navbar-links">
-          <a href="#chat">Chat</a>
-          <a href="#profile">Profile</a>
+          {/* Use onClick to navigate */}
+          <span onClick={() => handleNavigation('/chat')} className="nav-link">
+            Chat
+          </span>
+          <span onClick={() => handleNavigation('/profile')} className="nav-link">
+            Profile
+          </span>
         </div>
       </nav>
 
@@ -58,8 +71,8 @@ function HomePage() {
           <div className="card market-mood">
             <h2>Market Mood</h2>
             <div className="mood-options">
-              <button >Bullish</button>
-              <button >Bearish</button>
+              <button>Bullish</button>
+              <button>Bearish</button>
             </div>
           </div>
         </div>
@@ -70,7 +83,7 @@ function HomePage() {
           <div className="card stock-sentiment-search">
             <h2>Stock Sentiment Search</h2>
             <p>Enter Stock Symbol Here</p>
-            <input type="text" placeholder=" AAPL" />
+            <input type="text" placeholder="AAPL" />
             <button className="lookup-btn">Look Up</button>
           </div>
         </div>
